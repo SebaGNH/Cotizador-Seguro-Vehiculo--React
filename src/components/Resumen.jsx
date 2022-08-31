@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import {primerMayuscula} from '../Helper/Helper';
 import {DivResumen} from '../Styles/Resumen';
 
@@ -14,5 +15,9 @@ const Resumen = ({resumen}) => {
         </ul>
       </DivResumen>
     );
+}
+
+Resumen.propTypes = {
+  resumen: PropTypes.object.isRequired
 }
 export default Resumen;

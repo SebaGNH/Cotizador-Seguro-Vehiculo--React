@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import {DivCampo,Label,Select,InputRadio,Button,DivError} from '../Styles/Formulario';
 import { obtenerDiferenciaYear, calcularMarca , calculaPlan} from '../Helper/Helper';
 
@@ -137,5 +138,12 @@ const Formuario = ({setResumen,setCargando}) => {
       <Button type='submit'>Cotizar</Button>
     </form>
   );
+}
+
+//Formuario = ({setResumen,setCargando})
+
+Formuario.propTypes = {
+  setResumen: PropTypes.func.isRequired,
+  setCargando: PropTypes.func.isRequired
 }
 export default Formuario;
