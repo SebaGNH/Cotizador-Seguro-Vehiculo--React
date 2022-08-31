@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Cotizador-Seguro-Vehiculo--React/static/css/main.bc433a3f.css",
+    "main.js": "/Cotizador-Seguro-Vehiculo--React/static/js/main.2962575e.js",
+    "index.html": "/Cotizador-Seguro-Vehiculo--React/index.html",
+    "main.bc433a3f.css.map": "/Cotizador-Seguro-Vehiculo--React/static/css/main.bc433a3f.css.map",
+    "main.2962575e.js.map": "/Cotizador-Seguro-Vehiculo--React/static/js/main.2962575e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc433a3f.css",
+    "static/js/main.2962575e.js"
+  ]
+}
