@@ -13,8 +13,10 @@
 cotizador-seguro-vehiculo
 
 
-
-
+///-------- Recursos ----------//*
+https://emotion.sh/docs/introduction
+https://tobiasahlin.com/spinkit/
+https://github.com/codigoconjuan/cotizador_react
 
 -->
 
