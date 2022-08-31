@@ -3,7 +3,7 @@ import {DivCampo,Label,Select,InputRadio,Button,DivError} from '../Styles/Formul
 import { obtenerDiferenciaYear, calcularMarca , calculaPlan} from '../Helper/Helper';
 
 
-const Formuario = ({setResumen}) => {
+const Formuario = ({setResumen,setCargando}) => {
   const [datos, setDatos] = useState({
     marca:'',
     year:'',
@@ -53,11 +53,17 @@ const Formuario = ({setResumen}) => {
     //Básico aumenta 20% - Completo 50%
     resultado = parseFloat(calculaPlan(datos.plan) * resultado).toFixed(2);
     //console.log(resultado)
-    //Total
-    setResumen({
-      cotizacion: resultado,
-      datos //Objeto con todos los datos "Marca, Año, Plan"
-    });
+    
+    setCargando(true);
+    setTimeout( ()=>{
+      //Elimina Spinner
+      setCargando(false);
+      //Pasa información al componente principal
+      setResumen({
+        cotizacion: resultado,
+        datos //Objeto con todos los datos "Marca, Año, Plan"
+      });
+    },1000);
     limpiarCampos();
   }
 

@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+
+
 export const Parrafo = styled.p`
   background-color: #7cf4ed;
   //margin-top: 2rem;

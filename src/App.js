@@ -4,11 +4,11 @@ import styled from '@emotion/styled';
 import Formuario from './components/Formulario';
 import Resumen from './components/Resumen';
 import Resultado from './components/Resultado';
-
+import Spinner from './components/Spiner';
 
 function App() {
   const [resumen, setResumen] = useState({});
-
+  const [cargando, setCargando] = useState(false);
   return (
     <>
       <DivScContenedor>
@@ -18,16 +18,28 @@ function App() {
         <DivScContenedorFormulario>
           <Formuario
             setResumen={setResumen}
+            setCargando={setCargando}
           />
-        </DivScContenedorFormulario>
+        
+          {cargando?             
+            <Spinner/> 
+          :          
+            null
+          }
+        
         {resumen.datos?
           <Resumen
             resumen={resumen}
           />
         : null }
-        <Resultado
-          resumen={resumen}
-        />
+
+        {!cargando ? 
+          <Resultado
+            resumen={resumen}
+          />        
+        : null}
+
+        </DivScContenedorFormulario>
       </DivScContenedor>
     </>
   );

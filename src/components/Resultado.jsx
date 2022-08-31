@@ -1,6 +1,6 @@
 import React from 'react';
 import {Parrafo,DivResultado} from '../Styles/Resultado';
-
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
 
 const Resultado = ({resumen}) => {
   const {cotizacion} = resumen;
@@ -9,7 +9,18 @@ const Resultado = ({resumen}) => {
 
   return (
     <DivResultado>
-      <Parrafo>El total es: ${cotizacion}</Parrafo>
+    <TransitionGroup
+      component='p'
+      className='resultado'
+    >
+      <CSSTransition
+        classNames='resultado'
+        key={cotizacion}
+        timeout={{enter:500,exit:500}}
+      >
+        <Parrafo>El total es: ${cotizacion}</Parrafo>
+      </CSSTransition>
+    </TransitionGroup>
     </DivResultado>
   );
 }
