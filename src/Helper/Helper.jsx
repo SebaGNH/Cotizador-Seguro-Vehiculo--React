@@ -28,4 +28,15 @@ const calculaPlan = (plan) => {
   return (plan === 'basico') ? 1.20 : 1.50;
 }
 
+
 export {obtenerDiferenciaYear,calcularMarca, calculaPlan};
+
+
+// Muestra la primer letra en mayúscula
+
+export const primerMayuscula = (texto) => {
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+}
+
+
+

@@ -25,7 +25,9 @@ function App() {
             resumen={resumen}
           />
         : null }
-        
+        <Resultado
+          resumen={resumen}
+        />
       </DivScContenedor>
     </>
   );

@@ -6,6 +6,9 @@ const DivResumen = styled.div`
   background-color: #00388f;
   color: #fff;
   margin-top: 1rem;
+  span{
+    text-transform: capitalize;
+  }
 `;
 
-export {};
+export {DivResumen};
